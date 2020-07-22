@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaurant page created for the Odin Project. The focus of this project is on the use of the Webpack module bundler, while also getting additional practice in DOM manipulation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vas75/Restaurant-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vas75/Restaurant-Page/issues"
+  },
+  "homepage": "https://github.com/Vas75/Restaurant-Page#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
