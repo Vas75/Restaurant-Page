@@ -1,13 +1,15 @@
 import makeAbout from "./about-module.js";
-// import makeMenu from "./menu-module.js"; //todo
+import makeMenu from "./menu-module.js";
+import makeContact from "./contact-module.js";
 
-makeAbout();
+(function () {
+  makeAbout();
 
-const myCode = (function () {
   const nav = document.querySelector("nav");
   const navBtns = document.querySelectorAll("button");
   const contentDiv = document.getElementById("content");
 
+  //depending on which btn clicked, runs module, which populates contents div
   const runCorrectModule = (e) => {
     const btnID = e.target.id;
     clearContentsDiv();
@@ -15,21 +17,21 @@ const myCode = (function () {
     if (btnID === "about") {
       makeAbout();
     } else if (btnID === "menu") {
-      console.log("menu button pressed!");
+      makeMenu();
     } else if (btnID === "contact") {
-      console.log("contact btn pressed");
+      makeContact();
     }
   };
 
+  //clear old stuff from contents div when new contents of a module are added to contents div
   const clearContentsDiv = () => {
     contentDiv.innerHTML = "";
   };
 
+  //add 'selected' class to clicked btn, remove the class from other buttons
   const makeBtnSelected = (e) => {
-    const activeBtn = e.target;
-
     navBtns.forEach((btn) => {
-      if (btn === activeBtn) {
+      if (btn.id === e.target.id) {
         btn.classList.add("selected");
       } else {
         btn.classList.remove("selected");
@@ -37,11 +39,11 @@ const myCode = (function () {
     });
   };
 
+  //eventlisteners//
   nav.addEventListener("click", (e) => {
     if (e.target.type === "button") {
       runCorrectModule(e);
       makeBtnSelected(e);
     }
   });
-  return {};
 })();

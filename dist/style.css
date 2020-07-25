@@ -64,6 +64,10 @@ h1 {
   font-size: 4rem;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -118,9 +122,27 @@ h1 {
   font-size: 1.6rem;
 }
 
+/*about module*/
 .about-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
+}
+
+/*menu content*/
+.menu h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu div {
+  margin-top: 10px;
+}
+
+/*underline module titles*/
+.module-title {
+  border-bottom: 2px solid #fff;
 }
